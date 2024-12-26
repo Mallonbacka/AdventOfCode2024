@@ -121,25 +121,3 @@ for n in range(1, 45):
         print("=")
         print("{:045b}".format(circuit.z_gates_value()))
         break
-
-exit()
-    
-
-for n in range(1000):
-    for m in range(n):
-        circuit.set_input("x", n)
-        circuit.set_input("y", m)
-        circuit.evaluate_fully()
-        if circuit.z_gates_value() == n + m:
-            print("Passed with", n, "+", m)
-        else:
-            print("Failed with", n, "+", m)
-            print("Binary representations:")
-            print("{:045b}".format(n))
-            print("{:045b}".format(m))
-            print("=")
-            print("{:045b}".format(circuit.z_gates_value()))
-            exit()
-
-circuit.evaluate_fully()
-print(circuit.z_gates_value())

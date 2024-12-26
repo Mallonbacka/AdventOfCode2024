@@ -12,7 +12,7 @@ with open("input.txt") as f:
     lines = f.readlines()
 
 low = 1024
-high = 3450
+high = len(lines)
 
 while low < (high - 1):
     midpoint = int((high + low) / 2)
